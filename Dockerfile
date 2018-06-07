@@ -4,7 +4,7 @@ FROM python:alpine
 RUN apk add --update ca-certificates && update-ca-certificates
 
 # Install the required packages
-RUN pip install redis flower
+RUN pip install redis flower tornado==4.5.3
 
 # PYTHONUNBUFFERED: Force stdin, stdout and stderr to be totally unbuffered. (equivalent to `python -u`)
 # PYTHONHASHSEED: Enable hash randomization (equivalent to `python -R`)
